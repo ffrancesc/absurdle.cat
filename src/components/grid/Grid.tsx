@@ -1,25 +1,32 @@
-import { CompletedRow } from "./CompletedRow";
-import { CurrentRow } from "./CurrentRow";
-import { EmptyRow } from "./EmptyRow";
+import React, { useRef, useEffect } from "react";
+import { Hint } from "../../lib/game";
+import { Row } from "./Row";
 
 type Props = {
-  guesses: string[];
+  guesses: { guess: string, hints: Hint[] }[];
   currentGuess: string;
 };
 
 export const Grid = ({ guesses, currentGuess }: Props) => {
-  const empties =
-    guesses.length < 5 ? Array.from(Array(5 - guesses.length)) : [];
+  const currentRow = useRef<null | HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    if (currentRow.current) currentRow.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  useEffect(() => {
+    scrollToBottom()
+  });
 
   return (
-    <div className="pb-6">
-      {guesses.map((guess, i) => (
-        <CompletedRow key={i} guess={guess} />
+    <div className="overflow-y-auto grow">
+      {guesses.map(({ guess, hints }, i) => (
+        <Row key={i} guess={guess} hints={hints} />
       ))}
-      {guesses.length < 6 && <CurrentRow guess={currentGuess} />}
-      {empties.map((_, i) => (
-        <EmptyRow key={i} />
-      ))}
+      <Row innerRef={currentRow} guess={currentGuess} />
     </div>
   );
 };

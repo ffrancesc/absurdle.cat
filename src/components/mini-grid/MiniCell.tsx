@@ -1,23 +1,21 @@
-import { CharStatus } from "../../lib/statuses";
+import { Hint } from "../../lib/game";
 import classnames from "classnames";
 
 type Props = {
-  status: CharStatus;
+  hint: Hint;
 };
 
-export const MiniCell = ({ status }: Props) => {
+export const MiniCell = ({ hint }: Props) => {
   const classes = classnames(
     "w-10 h-10 border-solid border-2 border-slate-200 flex items-center justify-center mx-0.5 text-lg font-bold rounded",
     {
-      "bg-white": status === "absent",
-      "bg-green-500": status === "correct",
-      "bg-yellow-500": status === "present",
+      "bg-white": hint === "absent",
+      "bg-green-500": hint === "correct",
+      "bg-yellow-500": hint === "present",
     }
   );
 
   return (
-    <>
-      <div className={classes}></div>
-    </>
+      <div className={classes}/>
   );
 };

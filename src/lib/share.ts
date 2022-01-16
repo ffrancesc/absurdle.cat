@@ -1,34 +1,27 @@
-import { getGuessStatuses } from "./statuses";
-import { solutionIndex } from "./words";
+import { Hint } from "./game";
 
-export const shareStatus = (guesses: string[]) => {
+export const shareStatus = (hints: Hint[][]) => {
   navigator.clipboard.writeText(
-    "Wordle " +
-      solutionIndex +
-      " " +
-      guesses.length +
-      "/6\n\n" +
-      generateEmojiGrid(guesses)
+    `Absurdle en ${hints.length} intents:\n\n` +
+    generateEmojiGrid(hints)
   );
 };
 
-export const generateEmojiGrid = (guesses: string[]) => {
-  return guesses
-    .map((guess) => {
-      const status = getGuessStatuses(guess);
-      return guess
-        .split("")
-        .map((letter, i) => {
-          switch (status[i]) {
-            case "correct":
-              return "🟩";
-            case "present":
-              return "🟨";
-            default:
-              return "⬜";
-          }
-        })
-        .join("");
+const showHint = (hint: Hint): string => {
+  switch (hint) {
+    case "correct":
+      return "🟩";
+    case "present":
+      return "🟨";
+    case "absent":
+      return "⬜";
+  }
+}
+
+export const generateEmojiGrid = (hints: Hint[][]) => {
+  return hints
+    .map((hints) => {
+      return hints.map(showHint).concat();
     })
     .join("\n");
 };

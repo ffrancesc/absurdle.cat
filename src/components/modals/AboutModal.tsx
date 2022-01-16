@@ -50,24 +50,15 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
                     as="h3"
                     className="text-lg leading-6 font-medium text-gray-900"
                   >
-                    About
+                    Més
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      This is an open source clone of the game Wordle -{" "}
-                      <a
-                        href="https://github.com/hannahcode/wordle"
-                        className="underline font-bold"
-                      >
-                        check out the code here
-                      </a>{" "}
-                      and{" "}
-                      <a
-                        href="https://www.powerlanguage.co.uk/wordle/"
-                        className="underline font-bold"
-                      >
-                        play the original here
-                      </a>
+                      Això es un projecte de <a href="https://github.com/ffrancesc/absurdle.cat" className="underline font-bold">codi obert</a> creat a partir de 
+                      <a href="https://github.com/hannahcode/wordle" className="underline font-bold"> hannahcode/wordle</a> i basat en la idea original de <a href="https://qntm.org/wordle" className="underline font-bold">qntm</a>
+                      <br />
+                      <br />
+                      Juga l'original <a href="https://www.powerlanguage.co.uk/wordle/" className="underline font-bold"> aquí</a>!
                     </p>
                   </div>
                 </div>

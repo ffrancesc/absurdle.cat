@@ -14,5 +14,5 @@ export const saveGameStateToLocalStorage = (guesses: string[]) => {
 export const loadGameStateFromLocalStorage = () => {
   const state = localStorage.getItem(gameStateKey);
 
-  return state ? (JSON.parse(state) as StoredGameState) : null;
+  return { guesses: [] };
 };

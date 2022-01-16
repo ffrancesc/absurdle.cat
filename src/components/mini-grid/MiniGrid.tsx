@@ -1,14 +1,16 @@
-import { MiniCompletedRow } from "./MiniCompletedRow";
+import { Hint } from "../../lib/game";
+import { MiniRow } from "./MiniRow";
 
 type Props = {
-  guesses: string[];
+  hints: Hint[][];
 };
 
-export const MiniGrid = ({ guesses }: Props) => {
+export const MiniGrid = ({ hints }: Props) => {
+
   return (
     <div className="pb-6">
-      {guesses.map((guess, i) => (
-        <MiniCompletedRow key={i} guess={guess} />
+      {hints.map((hint, i) => (
+        <MiniRow key={i} hints={hint} />
       ))}
     </div>
   );

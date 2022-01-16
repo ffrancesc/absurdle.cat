@@ -1,41 +1,32 @@
 import { ReactNode } from "react";
 import classnames from "classnames";
 import { KeyValue } from "../../lib/keyboard";
-import { CharStatus } from "../../lib/statuses";
 
 type Props = {
   children?: ReactNode;
   value: KeyValue;
-  width?: number;
-  status?: CharStatus;
+  disabled: boolean;
+  className?: String;
   onClick: (value: KeyValue) => void;
 };
 
 export const Key = ({
   children,
-  status,
-  width = 40,
+  disabled,
+  className,
   value,
   onClick,
 }: Props) => {
   const classes = classnames(
-    "flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer",
-    {
-      "bg-slate-200 hover:bg-slate-300 active:bg-slate-400": !status,
-      "bg-slate-400 text-white": status === "absent",
-      "bg-green-500 hover:bg-green-600 active:bg-green-700 text-white":
-        status === "correct",
-      "bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 text-white":
-        status === "present",
-    }
+    "flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer h-14 w-12",
+    className,
+    disabled? 
+      "bg-slate-400 text-white pointer-events-none" :
+      "bg-slate-200 hover:bg-slate-300 active:bg-slate-400"
   );
 
   return (
-    <div
-      style={{ width: `${width}px`, height: "58px" }}
-      className={classes}
-      onClick={() => onClick(value)}
-    >
+    <div className={classes} onClick={() => onClick(value)}>
       {children || value}
     </div>
   );
