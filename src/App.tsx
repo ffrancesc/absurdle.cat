@@ -32,7 +32,7 @@ function App() {
   }, [isGameWon]);
 
   const onChar = (value: KeyValue) => {
-    if (currentGuess.length < 5 && !disabledKeys.has(value)) {
+    if (currentGuess.length < 5) {
       setCurrentGuess(`${currentGuess}${value}`);
     }
   };
@@ -80,7 +80,7 @@ function App() {
         isOpen={shareComplete}
         variant="success"
       />
-      <div className="flex w-2/4 mx-auto items-center mb-8 place-content-evenly">
+      <div className="flex min-w-2/4 mx-auto items-center mb-8 place-content-evenly">
         <h1 className="text-2xl font-bold">ABSURDLE.CAT</h1>
         <InformationCircleIcon
           className="h-10 w-10 px-2 cursor-pointer"

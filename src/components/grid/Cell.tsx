@@ -21,16 +21,15 @@ export const Cell = ({ value, hint, index = 0 }: Props) => {
   );
 
   const transition = classnames(
-    "transform transition ease-in-out duration-[600ms]",
-    `delay-[${index}00ms]`,
-
+    "transform transition ease-in-out duration-800ms",
+    `cdelay-${index}`,
   )
   return (
     <Transition
       show={true}
       appear={value !== undefined}
       enter={transition}
-      enterFrom="opacity-75 bg-transparent"
+      enterFrom="opacity-75"
       enterTo={`opacity-100 scale-100 ${color}`}
       entered={color}
       className="w-14 h-14 border-solid border-2 flex items-center justify-center mx-0.5 text-lg font-bold rounded"
