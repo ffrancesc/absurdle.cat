@@ -23,6 +23,7 @@ export const pruneWords = (words: string[], guess: string): string[] => {
         case "correct": return "c";
         case "absent": return "a";
         case "present": return "p";
+        default: return "";
       }
     }).join("");
   };

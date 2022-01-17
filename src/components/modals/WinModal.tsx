@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/outline";
 import { MiniGrid } from "../mini-grid/MiniGrid";
 import { shareStatus } from "../../lib/share";
-import { Guess, Hint } from "../../lib/game";
+import { Hint } from "../../lib/game";
 
 type Props = {
   isOpen: boolean;
