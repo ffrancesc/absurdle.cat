@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/absurdle.cat/static/css/main.bb4c6559.css",
-    "main.js": "/absurdle.cat/static/js/main.7c9fb292.js",
+    "main.css": "/absurdle.cat/static/css/main.4377ab5e.css",
+    "main.js": "/absurdle.cat/static/js/main.26c1c3ee.js",
     "static/js/787.3500bfec.chunk.js": "/absurdle.cat/static/js/787.3500bfec.chunk.js",
     "index.html": "/absurdle.cat/index.html",
-    "main.bb4c6559.css.map": "/absurdle.cat/static/css/main.bb4c6559.css.map",
-    "main.7c9fb292.js.map": "/absurdle.cat/static/js/main.7c9fb292.js.map",
+    "main.4377ab5e.css.map": "/absurdle.cat/static/css/main.4377ab5e.css.map",
+    "main.26c1c3ee.js.map": "/absurdle.cat/static/js/main.26c1c3ee.js.map",
     "787.3500bfec.chunk.js.map": "/absurdle.cat/static/js/787.3500bfec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb4c6559.css",
-    "static/js/main.7c9fb292.js"
+    "static/css/main.4377ab5e.css",
+    "static/js/main.26c1c3ee.js"
   ]
 }
