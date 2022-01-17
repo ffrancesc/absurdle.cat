@@ -21,7 +21,7 @@ export const Key = ({
     "flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer h-14 w-12",
     className,
     disabled? 
-      "bg-slate-400 text-white pointer-events-none" :
+      "bg-slate-400 text-white" :
       "bg-slate-200 hover:bg-slate-300 active:bg-slate-400"
   );
 
