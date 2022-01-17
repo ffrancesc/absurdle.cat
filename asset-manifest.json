@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/absurdle.cat/static/css/main.2bca7006.css",
+    "main.js": "/absurdle.cat/static/js/main.4ea4b473.js",
+    "static/js/787.3500bfec.chunk.js": "/absurdle.cat/static/js/787.3500bfec.chunk.js",
+    "index.html": "/absurdle.cat/index.html",
+    "main.2bca7006.css.map": "/absurdle.cat/static/css/main.2bca7006.css.map",
+    "main.4ea4b473.js.map": "/absurdle.cat/static/js/main.4ea4b473.js.map",
+    "787.3500bfec.chunk.js.map": "/absurdle.cat/static/js/787.3500bfec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bca7006.css",
+    "static/js/main.4ea4b473.js"
+  ]
+}
